@@ -16,7 +16,7 @@ enum NavigationEvents {
 abstract class NavigationStates {}
 
 class NavigationBloc extends Bloc<NavigationEvents, NavigationStates> {
-  NavigationStates get initialState => HomePage();
+  NavigationBloc(NavigationStates initialState) : super(initialState);
 
   @override
   Stream<NavigationStates> mapEventToState(NavigationEvents event) async* {
